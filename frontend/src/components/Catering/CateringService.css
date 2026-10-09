@@ -1,0 +1,119 @@
+.catering-service {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.catering-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  color: white;
+}
+
+.catering-header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.cart-button {
+  padding: 12px 24px;
+  background-color: white;
+  color: #667eea;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cart-button:hover,
+.cart-button.active {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.catering-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu-section {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #f0f0f0;
+  background-color: #f9f9f9;
+}
+
+.tab {
+  min-width: 0;
+  width: 100%;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tab:hover {
+  background-color: #f0f0f0;
+  color: #667eea;
+}
+
+.tab.active {
+  background-color: white;
+  color: #667eea;
+  border-bottom: 3px solid #667eea;
+}
+
+.loading {
+  padding: 60px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .catering-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .catering-header h1 {
+    font-size: 24px;
+  }
+
+  .tab {
+    padding: 12px 15px;
+    font-size: 12px;
+  }
+
+  .category-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 320px) {
+  .category-tabs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
