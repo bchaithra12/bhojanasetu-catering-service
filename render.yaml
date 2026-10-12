@@ -18,8 +18,9 @@ services:
       - key: FRONTEND_URL
         value: https://${{bhojanasetu-web.host}}
 
-  - type: static_site
+  - type: web
     name: bhojanasetu-web
+    runtime: static
     rootDir: frontend
     buildCommand: npm ci && npm run build
     staticPublishPath: ./dist
